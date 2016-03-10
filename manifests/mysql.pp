@@ -82,7 +82,11 @@ class newrelic_plugins::mysql (
     $install_path,
     $user,
     $version = $newrelic_plugins::params::mysql_version,
-    $servers,
+    $servers = [
+       {
+         host          => 'localhost',
+        }
+    ]
     $metrics = '',
     $mysql_user = '',
     $mysql_passwd = '',

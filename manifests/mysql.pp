@@ -82,11 +82,6 @@ class newrelic_plugins::mysql (
     $install_path,
     $user,
     $version = $newrelic_plugins::params::mysql_version,
-    $servers = [
-       {
-         host => 'localhost'
-        }
-    ]
     $metrics = '',
     $mysql_user = '',
     $mysql_passwd = '',
@@ -95,6 +90,11 @@ class newrelic_plugins::mysql (
     $plugin_template = 'newrelic_plugins/mysql/plugin.json.erb',
     $service_enable = true,
     $service_ensure = running,
+    $servers = [
+       {
+         host => 'localhost'
+        }
+    ]
 ) inherits params {
 
   include stdlib

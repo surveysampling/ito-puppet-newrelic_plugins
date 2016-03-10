@@ -84,7 +84,7 @@ class newrelic_plugins::mysql (
     $version = $newrelic_plugins::params::mysql_version,
     $servers = [
        {
-         host          => 'localhost',
+         host          => 'localhost'
         }
     ]
     $metrics = '',
